@@ -1,6 +1,284 @@
 MODUL BAB 6
 Struktur Kontrol 
 
+///
+
+import javax.swing.JOptionPane;
+
+public class LatihanModul6_1BufferedReader {
+
+    public static void main( String[] args ){ 
+        String name = "";
+        name = 
+        JOptionPane.showInputDialog("Please enter your name");
+        String msg = "Hello " + name + "!";
+        JOptionPane.showMessageDialog(null, msg);
+    }
+}
+
+Program di atas adalah program sederhana yang meminta pengguna untuk memasukkan nama mereka menggunakan input dialog dari JOptionPane. Setelah pengguna memasukkan namanya, program akan menampilkan pesan sapaan "Hello" dengan nama pengguna yang dimasukkan sebelumnya menggunakan dialog dari JOptionPane.
+
+Baris pertama program mengimpor kelas JOptionPane dari paket javax.swing.
+Baris kedua mendefinisikan kelas "LatihanModul6_1BufferedReader".
+Baris ketiga mendefinisikan metode "main".
+Baris keempat mendeklarasikan variabel "name" sebagai String dan memberinya nilai kosong ("").
+Baris kelima menggunakan JOptionPane untuk menampilkan dialog input yang meminta pengguna untuk memasukkan nama mereka dan nilai yang dimasukkan akan disimpan ke dalam variabel "name".
+Baris keenam mendefinisikan variabel "msg" sebagai String dan menggabungkan nilai "Hello" dengan nilai variabel "name".
+Baris terakhir menggunakan JOptionPane untuk menampilkan dialog pesan sapaan dengan isi pesan yang disimpan dalam variabel "msg" yang telah dibuat sebelumnya.
+
+///
+
+import javax.swing.JOptionPane;
+
+public class LatihanModul6_1JOptionPane {
+
+    public static void main(String[]args)
+        {
+        int a=0;
+        int b=0;
+        int c=0;
+        int rata=0;
+
+        String input1="";
+        String input2="";
+        String input3="";
+        String hasil="";
+        String senyum="";
+
+        input1=JOptionPane.showInputDialog("Nilai1:" );
+        input2=JOptionPane.showInputDialog("Nilai2:" );
+        input3=JOptionPane.showInputDialog("Nilai3:" );
+
+        a=Integer.parseInt(input1);
+        b=Integer.parseInt(input2);
+        c=Integer.parseInt(input3);
+
+        rata=(a+b+c)/3;
+
+        if(rata>60){
+        senyum=":D";
+        }else
+        senyum=":)";
+
+        hasil +=(hasil)+(" Menghitung Rata-rata")+"\n";
+        hasil +="\n";
+        hasil +="Nilai 1:"+Integer.toString(a)+"\n";
+        hasil +="Nilai 2:"+Integer.toString(b)+"\n";
+        hasil +="Nilai 3:"+Integer.toString(c)+"\n";
+
+        hasil +="\n";
+        hasil +="Hasil Rata-rata= "+Integer.toString(rata)+"\n"+"\n"+"\n";
+        JOptionPane.showMessageDialog(null,hasil+"Ekspresi"+" "+senyum);
+        }
+}
+
+Kodingan di atas merupakan program untuk menghitung rata-rata dari tiga nilai yang diinputkan oleh user menggunakan JOptionPane.
+
+Pada awal program, tiga variabel untuk menyimpan input dari user diinisialisasi dengan nilai awal 0. Kemudian, tiga string untuk menyimpan input dari user juga diinisialisasi dengan string kosong.
+
+Setelah itu, masing-masing string input dari user ditampilkan pada dialog box menggunakan JOptionPane.showInputDialog(). Kemudian, ketiga input tersebut diubah dari tipe data string menjadi integer menggunakan Integer.parseInt() dan disimpan ke dalam variabel masing-masing.
+
+Setelah tiga input dikonversi ke tipe data integer, program menghitung rata-rata dari tiga nilai tersebut dan menyimpannya dalam variabel rata.
+
+Selanjutnya, program membandingkan nilai rata-rata dengan 60. Jika nilai rata-rata lebih besar dari 60, variabel senyum diisi dengan ":D". Jika tidak, variabel senyum diisi dengan ":)".
+
+Terakhir, program membangun sebuah string pesan yang berisi nilai dari ketiga input, nilai rata-rata, dan ekspresi senyum. String tersebut ditampilkan pada dialog box menggunakan JOptionPane.showMessageDialog().
+
+///
+
+import javax.swing.JOptionPane;
+
+public class LatihanModul6_2ifelse {
+
+    public static void main(String[]args){
+            String angka="";
+            angka=JOptionPane.showInputDialog("Silahkan masukkan angka ");
+            int z = Integer.valueOf(angka).intValue();
+
+            String hasil ="";
+            if (z>=1&&z<=10){
+             hasil += "Valid number";
+            }
+            else{
+             hasil += "Invalid Number";
+            }
+           JOptionPane.showMessageDialog(null, hasil);
+           }
+}
+
+Kode di atas merupakan contoh program Java yang menggunakan JOptionPane untuk meminta input dari pengguna. Program akan menampilkan dialog input box untuk meminta pengguna memasukkan sebuah angka. Setelah pengguna memasukkan angka, program akan memeriksa apakah angka tersebut berada dalam rentang 1 hingga 10 menggunakan struktur percabangan if-else.
+
+Jika angka yang dimasukkan berada dalam rentang 1 hingga 10, maka program akan menampilkan pesan "Valid number". Namun jika angka tidak berada dalam rentang tersebut, maka program akan menampilkan pesan "Invalid number". Hasil dari pengecekan tersebut akan ditampilkan pada sebuah dialog box menggunakan JOptionPane.
+
+///
+
+import javax.swing.JOptionPane;
+
+public class LatihanModul6_2switch {
+
+    public static void main(String[]args){
+        String angka="";
+        angka=JOptionPane.showInputDialog("Silahkan masukkan angka ");
+        int z = Integer.valueOf(angka).intValue();
+
+        String hasil="";
+        switch(z){
+        case 1: hasil+= "Valid Number"; break;
+        case 2: hasil+= "Valid Number"; break;
+        case 3: hasil+= "Valid Number"; break;
+        case 4: hasil+= "Valid Number"; break;
+        case 5: hasil+= "Valid Number"; break;
+        case 6: hasil+= "Valid Number"; break;
+        case 7: hasil+= "Valid Number"; break;
+        case 8: hasil+= "Valid Number"; break;
+        case 9: hasil+= "Valid Number"; break;
+        case 10: hasil+= "Valid Number"; break;
+        default: hasil+= "Invalid Number"; break;
+        }
+       JOptionPane.showMessageDialog(null, hasil);
+       }
+}
+
+Kode di atas merupakan program Java yang menggunakan statement switch-case untuk mengecek apakah sebuah angka yang dimasukkan valid atau tidak. Program meminta pengguna untuk memasukkan sebuah angka melalui JOptionPane. Kemudian angka tersebut diubah menjadi integer dengan menggunakan metode Integer.valueOf(). Angka yang dimasukkan kemudian akan diperiksa apakah termasuk dalam rentang 1 hingga 10 dengan menggunakan statement switch-case. Jika angka tersebut termasuk dalam rentang tersebut, maka program akan mengeluarkan output "Valid Number", jika tidak maka output yang dihasilkan adalah "Invalid Number". Output ditampilkan menggunakan JOptionPane.
+
+///
+public class LatihanModul6_3dowhile {
+
+    public static void main(String args[]){
+            int r = 0;
+            do {
+             System.out.println("Melida Sari");
+             r++;
+             } while (r<100);
+            }  
+}
+
+Kodingan tersebut merupakan contoh penggunaan perulangan do-while dalam bahasa pemrograman Java. Program akan mengeksekusi perintah pada blok kode di dalam do setidaknya satu kali, bahkan jika kondisi di dalam while tidak terpenuhi.
+
+Pada kodingan di atas, program akan mencetak string "Melida Sari" dan menambahkan nilai variabel r sebanyak 1 setiap kali perulangan dilakukan. Perulangan akan terus dilakukan selama nilai variabel r kurang dari 100. Oleh karena itu, string "Melida Sari" akan dicetak sebanyak 100 kali pada output program.
+
+///
+public class LatihanModul6_3forloop {
+
+     public static void main(String args[]){
+            int r;
+            for (r=0; r<100; r++){
+            System.out.println("Melida Sari"); 
+            }
+            }
+}
+
+Kodingan di atas merupakan contoh penggunaan perulangan for loop dalam bahasa pemrograman Java. Pada program tersebut, sebuah variabel r dengan tipe data integer dideklarasikan terlebih dahulu, kemudian perulangan for digunakan untuk mencetak pesan "Melida Sari" sebanyak 100 kali. Pada setiap iterasi, variabel r akan ditambahkan nilai 1 dan perulangan akan terus berlanjut selama variabel r kurang dari 100.
+
+///
+
+public class LatihanModul6_3whileloop {
+
+    public static void main(String args[]){
+            int r=0;
+            while (r<100){
+             System.out.println("Melida Sari");
+             r++;
+            }
+           }
+}
+
+Kode di atas adalah contoh program Java untuk menampilkan pesan "Melida Sari" sebanyak 100 kali menggunakan perulangan while loop. Pertama, variabel r diinisialisasi dengan nilai awal 0. Kemudian, while loop diterapkan untuk mencetak pesan "Melida Sari" sebanyak 100 kali selama nilai r kurang dari 100. Setiap kali loop dieksekusi, nilai variabel r ditingkatkan dengan 1. Proses ini akan terus berlanjut hingga nilai r mencapai 100, saat itu loop akan berhenti dan program akan selesai.
+
+///
+
+import java.util.Scanner;
+
+public class LatihanModul6_4dowhile {
+
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("masukkan angka : ");
+    int angka = input.nextInt();
+    System.out.println("masukkan pangkat : ");
+    int pangkat = input.nextInt();
+
+    int i = 1;
+    int h = 1;
+
+    do {
+    h = h*angka;
+    i++ ;
+    }while(i<pangkat);
+    System.out.println(angka +" ^ " + pangkat + " = " +h);
+   }
+}
+
+Program di atas merupakan program yang menghitung pangkat dari sebuah bilangan. Program ini menggunakan perulangan do-while yang akan mengulang sebanyak pangkat yang dimasukkan oleh pengguna.
+
+Pada awal program, terdapat perintah untuk menginputkan bilangan yang akan dipangkatkan dan pangkat yang diinginkan oleh pengguna menggunakan Scanner. Selanjutnya, variabel i dan h diinisialisasi dengan nilai 1.
+
+Kemudian, perulangan do-while dilakukan untuk menghitung hasil pangkat. Pada setiap iterasi perulangan, variabel h akan dikalikan dengan bilangan yang dimasukkan oleh pengguna, sedangkan variabel i akan diincrement. Perulangan akan dilakukan selama variabel i kurang dari pangkat yang dimasukkan oleh pengguna.
+
+Setelah perulangan selesai dilakukan, program akan menampilkan hasil pangkat dari bilangan yang dimasukkan oleh pengguna dengan menggunakan statement System.out.println().
+
+///
+
+import java.util.Scanner;
+
+public class LatihanModul6_4forloop {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("masukkan angka : ");
+        int nilai = input.nextInt();
+        System.out.println("masukkan pangkat : ");
+        int pkt = input.nextInt();
+
+        int h = 1;
+
+        for (int i = 1; i < pkt;i++){
+        h = h * nilai;
+        }
+        System.out.println(nilai+ " ^ " + pkt + " = " +h);
+         }
+}
+
+Program di atas merupakan program Java yang menghitung nilai suatu bilangan yang dipangkatkan dengan bilangan tertentu menggunakan loop for.
+
+Program meminta pengguna untuk memasukkan dua angka yaitu nilai bilangan dan pangkatnya menggunakan objek Scanner. Kemudian, variabel h diinisialisasi dengan 1, dan loop for dijalankan dari 1 hingga nilai pangkat dikurangi 1. Di setiap iterasi, nilai h akan dikalikan dengan nilai bilangan. Setelah loop selesai dijalankan, program akan mencetak hasil dari nilai bilangan yang dipangkatkan dengan bilangan tertentu yang dimasukkan oleh pengguna.
+
+///
+
+import java.util.Scanner;
+
+public class LatihanModul6_4whileloop {
+
+    public static void main(String[] args) {
+            Scanner b = new Scanner(System.in);
+            System.out.println("masukkan angka : ");
+            int input = b.nextInt();
+
+            System.out.println("masukkan pangkat : ");
+            int pangkat = b.nextInt();
+
+            int i = 1;
+            int h = 1;
+
+            while (i<pangkat){
+            h = h*input;
+            i++;
+            }
+            System.out.println(input + " ^ " +pangkat +" = " +h);
+            }
+}
+
+Kode di atas merupakan program Java untuk menghitung hasil perpangkatan dari sebuah bilangan bulat dan pangkat yang dimasukkan oleh pengguna menggunakan loop while.
+
+Pertama, program meminta pengguna untuk memasukkan bilangan bulat dan pangkatnya menggunakan objek Scanner.
+
+Selanjutnya, program melakukan inisialisasi variabel i dan h dengan nilai 1. Variabel i digunakan sebagai counter untuk loop while, sedangkan variabel h menyimpan hasil perpangkatan.
+
+Kemudian, program masuk ke loop while yang akan berjalan selama nilai variabel i kurang dari nilai pangkat yang dimasukkan oleh pengguna. Pada setiap iterasi, variabel h akan dikalikan dengan bilangan bulat yang dimasukkan oleh pengguna. Setelah itu, nilai variabel i akan ditingkatkan sebesar 1.
+
+Setelah loop selesai, program akan mencetak hasil perpangkatan bilangan bulat dan pangkat yang dimasukkan oleh pengguna menggunakan metode println dari objek System.out.
+
+
 fungsi import javax.swing.JOptionPane;
 "javax.swing.JOptionPane" adalah kelas yang ada di Java API, yang digunakan untuk menampilkan dialog box pada aplikasi Java. Dialog box dapat digunakan untuk meminta input dari pengguna, menampilkan pesan, dan mengambil keputusan dari pengguna.
 

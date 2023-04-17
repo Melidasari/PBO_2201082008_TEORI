@@ -1,6 +1,174 @@
 BAB 1 
 Pengenalan Pemrograman Komputer 
 
+///
+public class ContohIncrement {
+
+    public static void main (String[] args ){
+        int i = 10;
+        int j = 3;
+        int k;
+        
+        k = j++ + i;
+        
+        System.out.println("i : "+i);
+        System.out.println("j : "+j);
+        System.out.println("k : "+k);
+    }
+}
+
+Program di atas merupakan contoh penggunaan operator increment pada bahasa pemrograman Java. Operator increment digunakan untuk menambah nilai suatu variabel dengan 1.
+
+Pada program di atas, terdapat tiga variabel yaitu i, j, dan k yang memiliki tipe data integer. Kemudian, nilai i diinisialisasi dengan 10 dan nilai j diinisialisasi dengan 3.
+
+Variabel k kemudian diinisialisasi dengan operasi j++ + i. Operasi ini terdiri dari dua operan, yaitu j++ dan i.
+
+Operator ++ disebut operator increment, yang artinya variabel j akan ditambahkan nilai 1 setelah nilai j digunakan pada operasi tersebut. Sehingga, nilai yang digunakan pada operasi tersebut adalah nilai awal variabel j yaitu 3.
+
+Setelah itu, hasil dari penjumlahan j++ + i yaitu 13 akan disimpan ke variabel k.
+
+Kemudian, program mencetak nilai dari variabel i, j, dan k menggunakan metode System.out.println(). Hasil output program adalah sebagai berikut:
+
+i : 10
+j : 4
+k : 13
+
+Dapat dilihat bahwa nilai variabel j telah bertambah 1 setelah operasi increment dilakukan.
+
+///
+public class KondisiOperator {
+
+    public static void main (String[] args ){
+       String status = "";
+       int grade = 80;
+       
+       //mendapatkan status pelajar
+       status = (grade >= 60)?"Passed":"Fail";
+       
+       //print status
+       System.out.println(status);
+    }
+}
+
+Kodingan di atas menggunakan operator kondisional ternary ? yang memiliki struktur condition ? value_if_true : value_if_false.
+
+Pada kasus di atas, terdapat variabel status yang akan diisi dengan nilai "Passed" jika nilai dari variabel grade lebih besar atau sama dengan 60, dan akan diisi dengan nilai "Fail" jika nilai dari variabel grade kurang dari 60. Ini ditentukan oleh operator kondisional ternary yang berada di dalam tanda kurung (grade >= 60)?"Passed":"Fail";.
+
+Setelah itu, nilai dari variabel status akan dicetak menggunakan perintah System.out.println(status);. Jika nilai dari variabel grade adalah 80, maka output yang dihasilkan adalah "Passed".
+
+///
+penjelasan kodingan dibawah ini
+
+public class Latihan1 {
+
+    public static void main (String[] args ){
+        int number = 10;
+        char letter = 'a';
+        boolean result = true;
+        String str = "hello";
+        
+        System.out.println(number);
+        System.out.println(letter);
+        System.out.println(result);
+        System.out.println(str);
+        
+    }
+}
+
+Program di atas adalah contoh program Java sederhana yang menunjukkan bagaimana mendeklarasikan dan menampilkan beberapa jenis variabel dalam Java, seperti int untuk bilangan bulat, char untuk karakter, boolean untuk tipe data boolean, dan String untuk teks.
+
+Pada program ini, terdapat empat variabel yang dideklarasikan dan kemudian dicetak menggunakan System.out.println(). Variabel number bertipe int diberi nilai 10. Variabel letter bertipe char diberi nilai 'a'. Variabel result bertipe boolean diberi nilai true. Variabel str bertipe String diberi nilai "hello".
+
+Kemudian, dengan menggunakan perintah System.out.println(), keempat variabel tersebut dicetak ke layar,
+
+///
+
+penjelasan kodingan dibawah ini
+
+public class Latihan2 {
+
+    public static void main (String[] args ){
+        int number1 = 10;
+        int number2 = 20;
+        int number3 = 45;
+        int average;
+        
+        average = (number1+number2+number3)/3;
+        
+        System.out.println(number1);
+        System.out.println(number2);
+        System.out.println(number3);
+        System.out.println(average);
+    }
+}
+
+Kodingan di atas merupakan program sederhana untuk menghitung rata-rata dari 3 bilangan bulat (number1, number2, dan number3).
+
+Pertama-tama, tiga variabel number1, number2, dan number3 diinisialisasi dengan nilai 10, 20, dan 45. Kemudian, nilai rata-rata dihitung dengan cara menambahkan ketiga bilangan tersebut, dan hasilnya dibagi dengan jumlah bilangan yang dijumlahkan (yaitu 3), dan disimpan ke dalam variabel average.
+
+Terakhir, hasil dari ketiga bilangan dan nilai rata-rata ditampilkan ke layar menggunakan perintah println().
+
+///
+penjelasan kodingan dibawah ini
+
+public class Latihan3 {
+
+     public static void main (String[] args ){
+        int number1 = 10;
+        int number2 = 23;
+        int number3 = 5;
+        int score = 0;
+        
+        score = (number2 > number3)?(number2>number1)?number2:number1:number3;
+        
+        System.out.println("number 1 = "+number1);
+        System.out.println("number 2 = "+number2);
+        System.out.println("number 3 = "+number3);
+        System.out.println("nilai tertingginya = "+score);
+    }
+}
+
+Program di atas adalah contoh penggunaan operator ternary dalam Java untuk mencari nilai tertinggi di antara tiga variabel integer. Operator ternary digunakan untuk mengevaluasi suatu kondisi dan mengembalikan nilai berdasarkan kondisi tersebut.
+
+Pada program ini, nilai variabel number2 dibandingkan dengan nilai variabel number3. Jika nilai number2 lebih besar dari number3, maka nilai variabel score akan sama dengan number2 jika nilai number2 lebih besar dari number1, dan akan sama dengan number1 jika tidak. Jika nilai number2 tidak lebih besar dari number3, maka nilai variabel score akan sama dengan number3. Variabel score akhirnya berisi nilai tertinggi di antara ketiga variabel.
+
+Hasilnya dicetak menggunakan metode System.out.println().
+
+///
+
+public class TesAND {
+    public static void main (String[] args ){
+        int i = 0;
+        int j = 10;
+        boolean test= false;
+        
+        //demosntrasi &&
+        test = (i > 10) && (j++ > 9);
+        System.out.println(i);
+        System.out.println(j);
+        System.out.println(test);
+        
+        //demonstrasi &
+        test = (i > 10) & (j++ > 9);
+        System.out.println(i);
+        System.out.println(j);
+        System.out.println(test);
+       
+    }
+}
+
+
+Program di atas adalah contoh penggunaan operator logika AND (&&) dan AND bit-wise (&) dalam bahasa pemrograman Java.
+
+Pada operator logika AND (&&), operator ini akan menghasilkan nilai true jika semua kondisi yang diberikan juga bernilai true. Sedangkan jika ada salah satu kondisi yang bernilai false, maka hasil dari operator ini juga akan false.
+
+Sedangkan pada operator AND bit-wise (&), operator ini melakukan operasi bitwise AND pada setiap bit pada kedua operand yang diberikan. Hasil dari operator ini adalah nilai biner baru yang terbentuk dari operasi bitwise AND.
+
+Pada program di atas, terdapat dua variabel integer, i dan j, dan sebuah variabel boolean test. Pertama-tama, variabel test diinisialisasi dengan false. Kemudian pada baris 8-10, kondisi pada operator && adalah false, sehingga nilai variabel test tetap false, dan variabel j tidak bertambah nilai karena operasi pada sisi kanan operator tidak dijalankan.
+
+Kemudian, pada baris 14-16, pada operator &, hasilnya juga false karena kondisi pada sisi kiri adalah false, sehingga nilai variabel test tetap false. Namun, pada sisi kanan operator &, variabel j bertambah nilai menjadi 11 karena operasi pada sisi kanan tetap dijalankan meskipun hasil akhirnya false.
+
+
 penjelasan dari kodingan dibawah ini
 public class Hello {
     public static void main (String[] args ){

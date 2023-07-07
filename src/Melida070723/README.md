@@ -1,4 +1,13 @@
-PENJELASAN MODUL 12
+PENJELASAN MODUL 12 // EXCEPTION
+
+
+Exception adalah sebuah peristiwa yang menjalankan alur proses normal pada program. Peristiwa
+ini biasanya berupa kesalahan(error) dari beberapa bentuk. Ini disebabkan program kita berakhir
+tidak normal.
+Beberapa contoh dari exception yang Anda mungkin jumpai pada latihan-latihan sebelumnya
+adalah: exception ArrayIndexOutOfBounds, yang terjadi jika kita mencoba mengakses elemen
+array yang tidak ada, atau NumberFormatException, yang terjadi ketika kita mencoba melalui
+parameter bukan angka dalam method Integer.parseInt.
 
 
 package Melida070723;
